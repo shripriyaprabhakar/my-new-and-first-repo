@@ -1,5 +1,6 @@
  
- var snippets = {code : []}
+ //var snippets = [];
+ var testObject = {};
 
 $(document).ready(function() {
   
@@ -14,9 +15,8 @@ $(document).ready(function() {
        $('.textField').val('');
       localStorage.setItem('myFormSnippetData', textAreaValue);
       $('.textArea').val('');
-      var testObject = {};
         testObject[textFieldValue] = textAreaValue;
-        snippets.code.push(JSON.stringify(testObject));
+        //snippets.code.push(JSON.stringify(testObject));
   });
 
   $(".getData").on('click', function() {
@@ -24,9 +24,21 @@ $(document).ready(function() {
      $('.codeContainer').text(retrievedData);
     let retrievedSnippetData = localStorage.getItem('myFormSnippetData');
      $('.debug').text(retrievedSnippetData);
-     $('.snippetContainer').text('retrieveSnippetName: ' + retrieveSnippetName + ' retrieveSnippetData: ' + retrieveSnippetData );
+     
    
   });
+
+      $('.getall').on('click',function(){
+     let retrievedData = JSON.parse(localStorage.getItem('testObject'));
+     // console.log(retrievedData);
+     for(let key in retrievedData){
+       
+       if($('.search').val() === key){
+         $('.dispSnip').append(retrievedData[key]);
+       }
+     }
+
+    });
   
 
   });

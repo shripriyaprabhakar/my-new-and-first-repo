@@ -16,18 +16,21 @@
     <script src="app.js"></script>
  </head>
  <body>
+  <header class="nameThis">****MY APP****</header>
   
 
-   <input class="textField" type="text" name = "Firstinputfield">
+   <input class="textField" type="text" name = "Firstinputfield" placeholder="Your snippet name">
   <!--  <input class="textArea" type="text" name = "Secondinputfield"> -->
 
 
-  <textarea class="textArea" type="text" rows="12" cols="48" placeholder="Add your snippet here"></textarea>
+  <textarea class="textArea" type="text" rows="20" cols="60" placeholder="Add your snippet here"></textarea>
+
+   <input type="text" class ="search" placeholder="Search Snippet">
 
     
    <button class = "setData">Save your snippet</button>
    <button class = "getData">Retrieve your previous snippet</button>
-   <button class="getall">Retrieve all snippets</button>
+   <button class="getall">Search Snippets</button>
    
 
   
@@ -35,6 +38,9 @@
 
  <!-- <div class = "debug"></div> -->
  <div class = "codeContainer"></div>
+  <div class = "dispSnip"></div>
+
+
  <pre class="debug"><code></code></pre>
 
  </body>
