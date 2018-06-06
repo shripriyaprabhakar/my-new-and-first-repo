@@ -14,4 +14,4 @@ goals:
 
 
 
-SEE ON : https://repl.it/@ShripriyaPrabha/Mynew-App
+SEE ON : https://mynew-app--shripriyaprabha.repl.co/
